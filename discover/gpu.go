@@ -420,6 +420,14 @@ func GetGPUInfo() GpuInfoList {
 					continue
 				}
 
+				// Initialize dependency paths for Vulkan
+				depPaths := []string{LibOllamaPath}
+				// Add vulkanLibPath directory if it's different from LibOllamaPath
+				vulkanDir := filepath.Dir(vulkanLibPath)
+				if vulkanDir != LibOllamaPath {
+					depPaths = append(depPaths, vulkanDir)
+				}
+
 				gpuInfo.TotalMemory = uint64(memInfo.total)
 				gpuInfo.FreeMemory = uint64(memInfo.free)
 				gpuInfo.ID = C.GoString(&memInfo.gpu_id[0])
