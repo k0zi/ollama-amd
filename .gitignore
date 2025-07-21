@@ -14,3 +14,15 @@ __debug_bin*
 llama/build
 llama/vendor
 /ollama
+/CMakeFiles
+*.cmake
+*.so
+/ml/backend/ggml/ggml/src/CMakeFiles
+ml/backend/ggml/ggml/src/Makefile
+ml/backend/ggml/ggml/src/ggml-cpu/Makefile
+ml/backend/ggml/ggml/src/ggml-cpu/CMakeFiles/progress.marks
+CMakeCache.txt
+Makefile
+/OLLAMA/CMakeFiles
+/OLLAMA/ml/backend/ggml/ggml/src/CMakeFiles
+/OLLAMA/ml/backend/ggml/ggml/src/ggml-cpu/CMakeFiles
